@@ -1,0 +1,7 @@
+<h1>Person List</h1>
+<a routerLink="/add-person" class="btn btn-primary m-3">Add Person</a>
+<button class="btn btn-danger" *ngIf="selected" (click)="deleteSelected()">Delete</button>
+
+<div class="row g-4">
+    <app-person-item (click)="select(person)" *ngFor="let person of list" [person]="person" class="col-md-4"  [ngClass]="{active: person == selected}"   />
+</div>

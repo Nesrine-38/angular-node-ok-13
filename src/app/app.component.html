@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="notificationService.current" class="toast show position-fixed top-0 end-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="me-auto">Notification</strong>
+    <button type="button" class="btn-close" aria-label="Close" (click)="notificationService.current = ''"></button>
+  </div>
+  <div class="toast-body">
+    {{notificationService.current}}
+  </div>
+</div>

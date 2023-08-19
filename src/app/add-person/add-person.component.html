@@ -1,0 +1,22 @@
+<h1>Add Person</h1>
+
+<form (ngSubmit)="handleSubmit()" ngNativeValidate>
+    <label for="name">name</label>
+    <input class="form-control" type="text" name="name" id="name" [(ngModel)]="person.name" required>
+    <label for="age">Age</label>
+    <input class="form-control" type="number" name="age" id="age" [(ngModel)]="person.age" required>
+    <fieldset>
+        <h2>Address</h2>
+
+        <label for="number">Street number</label>
+        <input class="form-control" type="text" name="number" id="number" [(ngModel)]="person.address.number" required>
+        <label for="street">Street name</label>
+        <input class="form-control" type="text" name="street" id="street" [(ngModel)]="person.address.street" required>
+        <label for="city">City</label>
+        <input class="form-control" type="text" name="city" id="city" [(ngModel)]="person.address.city" required>
+        <label for="country">Country</label>
+        <input class="form-control" type="text" name="country" id="country" [(ngModel)]="person.address.country" required>
+    </fieldset>
+
+    <button class="btn btn-primary mt-3">Add</button>
+</form>
